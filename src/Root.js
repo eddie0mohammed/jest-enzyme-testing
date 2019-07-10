@@ -1,7 +1,8 @@
 import React from 'react';
 import {Provider} from 'react-redux';
-import {createStore} from 'redux';
+import {createStore, applyMiddelware} from 'redux';
 import rootReducer from './reducers/rootReducer';
+import reduxPromise from 'redux-promise';
 
 
 const store = createStore(rootReducer);
