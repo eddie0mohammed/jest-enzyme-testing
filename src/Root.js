@@ -5,9 +5,11 @@ import rootReducer from './reducers/rootReducer';
 import reduxPromise from 'redux-promise';
 
 
-const store = createStore(rootReducer);
 
 export default (props) => {
+    const {initialState = {}} = props;
+const  store = createStore(rootReducer, initialState);
+
     return (
         <Provider store={store}>
             {props.children}
